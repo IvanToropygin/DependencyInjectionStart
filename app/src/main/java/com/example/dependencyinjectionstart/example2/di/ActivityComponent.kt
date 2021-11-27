@@ -4,6 +4,7 @@ import com.example.dependencyinjectionstart.example2.presentation.MainActivity
 import com.example.dependencyinjectionstart.example2.presentation.MainActivity2
 import dagger.BindsInstance
 import dagger.Subcomponent
+import javax.inject.Named
 
 @Subcomponent(
     modules = [ViewModelModule::class]
