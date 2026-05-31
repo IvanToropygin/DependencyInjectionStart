@@ -6,11 +6,12 @@ import com.example.dependencyinjectionstart.example2.data.ExampleRepositoryImpl
 import javax.inject.Inject
 
 class ExampleViewModel2 @Inject constructor(
-    private val repository: ExampleRepositoryImpl
+    private val repository: ExampleRepositoryImpl,
+    private val id: String
 ) : ViewModel() {
 
     fun method() {
         repository.method()
-        Log.d("ExampleViewModel2", this.toString())
+        Log.d("ExampleViewModel2", "$this - $id")
     }
 }

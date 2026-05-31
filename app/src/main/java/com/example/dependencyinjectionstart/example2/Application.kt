@@ -1,6 +1,7 @@
-package com.example.dependencyinjectionstart.example2.di
+package com.example.dependencyinjectionstart.example2
 
 import android.app.Application
+import com.example.dependencyinjectionstart.example2.di.DaggerApplicationComponent
 
 class ExampleApplication : Application() {
 

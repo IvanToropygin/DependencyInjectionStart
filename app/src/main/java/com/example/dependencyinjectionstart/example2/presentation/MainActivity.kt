@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.dependencyinjectionstart.R
-import com.example.dependencyinjectionstart.example2.di.ExampleApplication
+import com.example.dependencyinjectionstart.example2.ExampleApplication
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     private val component by lazy {
         (application as ExampleApplication).component
+            .activityComponentFactory().create("My_id")
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
